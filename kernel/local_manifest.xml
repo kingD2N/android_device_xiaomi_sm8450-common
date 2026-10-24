@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Kernel source for building the ingres kernel Image from source.
+    Copy to .repo/local_manifests/ingres-kernel-source.xml, then:
+        repo sync -c kernel/xiaomi/sm8450
+        device/xiaomi/sm8450-common/kernel/build-kernel.sh ingres
+-->
+<manifest>
+  <remote name="kingD2N" fetch="https://github.com/kingD2N" />
+
+  <project name="Tree_ingres" path="kernel/xiaomi/sm8450" remote="kingD2N" revision="melt-ingres" clone-depth="1" />
+</manifest>
