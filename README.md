@@ -1,3 +1,4 @@
+
 # Common device configuration for Xiaomi Taro family
 
 ## Currently supported SoCs
