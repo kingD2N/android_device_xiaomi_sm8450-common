@@ -125,8 +125,13 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Device Settings
 PRODUCT_PACKAGES += \
     KeyHandler \
-    XiaomiDolby \
     XiaomiParts
+
+# Dolby UI (device boleh memakai LunarisDolby lewat TARGET_USES_LUNARIS_DOLBY := true)
+ifneq ($(TARGET_USES_LUNARIS_DOLBY),true)
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+endif
 
 # Display / Graphics
 PRODUCT_PACKAGES += \
